@@ -24,7 +24,7 @@ Pass this resolver and its parameters to `eslint-plugin-import` using your `esli
             "config": "jsconfig.json",
         }
     }
-},;
+}
 ```
 ## Special thanks
 
