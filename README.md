@@ -13,7 +13,7 @@ npm install eslint-import-resolver-jsconfig --save-dev
 ```
 ## Usage
 
-Pass this resolver and its parameters to `eslint-plugin-import` using your `eslint` config file
+Pass this resolver and jsonconfig name to `eslint-plugin-import` using your `eslint` config file
 
 ```js
 // .eslintrc.json
@@ -21,11 +21,20 @@ Pass this resolver and its parameters to `eslint-plugin-import` using your `esli
 "settings": {
     "import/resolver": {
         "jsconfig": {
-            "config": "jsconfig.json",
+            "config": "jsconfig.json"
         }
     }
 }
 ```
+If it is necessary, pass array of extensions. Defaults are js and jsx.
+
+```js
+"jsconfig": {
+    "config": "jsconfig.json",
+    "extensions": [".js", ".jsx"]
+}
+```
+
 ## Special thanks
 
 [eslint-import-resolver-webpack](https://github.com/import-js/eslint-plugin-import/blob/master/resolvers/webpack/README.md)

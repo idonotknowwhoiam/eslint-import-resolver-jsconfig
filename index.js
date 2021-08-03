@@ -65,9 +65,9 @@ exports.resolve = function (source, file, config) {
         }, source);
 
         const resolvedPath = resolve.sync(modifiedSource, getOptions(file, config));
-        console.log(resolvedPath);
         return { found: true, path: resolvedPath };
     } catch (e) {
+        console.log(e);
         return { found: false };
     }
 };
@@ -94,7 +94,7 @@ function findConfigPath(configPath, packageDir) {
 
 function getOptions(file, config) {
     return {
-        extensions: config.extensions || [".js", "jsx"],
+        extensions: config.extensions || [".js", ".jsx"],
         basedir: path.dirname(path.resolve(file)),
         packageFilter(pkg) {
             pkg.main = pkg["jsnext:main"] || pkg.main;
