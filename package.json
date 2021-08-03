@@ -1,7 +1,7 @@
 {
     "name": "eslint-import-resolver-jsconfig",
     "version": "1.0.0",
-    "description": "Resolver for eslint-plugin-import to import aliases from jsconfig paths",
+    "description": "Resolver for eslint-plugin-import to import alias from jsconfig paths",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,10 @@
     ],
     "author": "idonotknowwhoiam ",
     "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/idonotknowwhoiam/eslint-import-resolver-jsconfig.git"
+    },
     "dependencies": {
         "find-root": "^1.1.0",
         "glob-parent": "^6.0.1",
